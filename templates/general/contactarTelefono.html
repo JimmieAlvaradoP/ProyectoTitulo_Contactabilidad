@@ -1,0 +1,158 @@
+{% extends "_Partials/_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %} CONTACTABILIDAD | Contactar por telefono {% endblock title %}}</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+          <div class="wrapper wrapper-content">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content mailbox-content">
+                    <div class="file-manager">
+                      <a class="btn btn-block btn-primary compose-mail" href="{% url 'redactarLlamada' %}">Llamar</a>
+                      <div class="space-25"></div>
+                      <br><br>
+                      <ul class="folder-list m-b-md" style="padding: 0">
+                        <li><a href="{% url 'contactarTelefono' %}"> <i class="fa fa-phone "></i> Historial </a></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 animated fadeInRight">
+                <div class="mail-box-header">
+                  <form method="get" action="index.html" class="pull-right mail-search">
+                    <div class="input-group">
+                      <input type="text" class="form-control input-sm" name="search" placeholder="Buscar llamada">
+                      <div class="input-group-btn">
+                        <button type="submit" class="btn btn-sm btn-primary">
+                          Buscar
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <h2>
+                    Historial de llamadas
+                  </h2>
+                  <div class="mail-tools tooltip-demo m-t-md">
+                    <div class="btn-group pull-right">
+                      <button class="btn btn-white btn-sm"><i class="fa fa-arrow-left"></i></button>
+                      <button class="btn btn-white btn-sm"><i class="fa fa-arrow-right"></i></button>
+                    </div>
+                    <button class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="left"><i class="fa fa-refresh"></i> Refresh</button>
+                  </div>
+                </div>
+                <div class="mail-box">
+
+                  <table class="table table-hover table-mail">
+                    <tbody>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Acevedo Manríquez María Mireya</a></td>
+                        <td class="mail-subject"><a href="{% url 'visualizarLlamada' %}">18.050.646-2</a></td>
+                        <td class="mail-subject"><a href="{% url 'visualizarLlamada' %}">Femenino</a></td>
+                        <td class="mail-subject"><a href="{% url 'visualizarLlamada' %}">Administración jurídica</a></td>
+                        <td class="mail-subject"><a href="{% url 'visualizarLlamada' %}">05/12/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Acosta Canto Tomás José</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">21.624.005-7</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Masculino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Enfermería</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">05/12/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Aguilar Lemus María Ofelia</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">18.559.668-0</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Femenino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Computación e informática</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">05/12/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Aguilar Pérez Fredy Francisco</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">17.438.902-0</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Masculino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Arquitectura</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">30/07/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Alcántar Camacho José Israel</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">18.062.447-3</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Masculino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Fonoaudiología</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">09/09/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Alcoverde Martínez Roberto Antonio</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">16.766.824-0</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Masculino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Comercial</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">10/11/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Alderete Porras Jacinta Guillermina</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">20.358.420-2</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Femenino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Composición musical</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">25/11/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Alejo Guerrero Víctor Hugo</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">19.837.118-1</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Masculino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Licenciatura en filosofía</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">07/8/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Alonso Ibarra Pascual Gerardo</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">17.912.767-9</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Masculino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Kinesiología</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">01/12/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                      <tr class="read">
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Alarcón López Gerardo Genaro</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">19.339.381-0</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Masculino</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">Computación e informática</a></td>
+                        <td class="mail-ontact"><a href="{% url 'visualizarLlamada' %}">15/03/2018</a></td>
+                        <td class=""><i class="fa fa-phone"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  {% block javascript %} {% endblock javascript %}
+
+</body>
+
+</html>

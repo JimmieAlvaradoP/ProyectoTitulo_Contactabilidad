@@ -1,0 +1,14 @@
+{% load static %}
+<nav class="navbar-default navbar-static-side navbar-custom" role="navigation" style="position:fixed;top:50px;left:0">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+
+      {% if request.session.rol == 'SECRETARIA' %}
+      {% include "_Partials/sidebars/_sidebar_secretaria.html" %}
+      {% elif request.session.rol == 'DIRECTOR' %}
+      {% include "_Partials/sidebars/_sidebar_director.html" %}
+      {% endif %}
+
+    </ul>
+  </div>
+</nav>

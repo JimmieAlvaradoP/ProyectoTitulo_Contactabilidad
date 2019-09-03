@@ -1,0 +1,87 @@
+{% extends "_Partials/_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %} CONTACTABILIDAD | Llmada {% endblock title %}}</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+          <div class="wrapper wrapper-content">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content mailbox-content">
+                    <div class="file-manager">
+                      <a class="btn btn-block btn-primary compose-mail" href="{% url 'redactarLlamada' %}">Llamar</a>
+                      <div class="space-25"></div>
+                      <br><br>
+                      <ul class="folder-list m-b-md" style="padding: 0">
+                        <li><a href="{% url 'contactarTelefono' %}"> <i class="fa fa-phone "></i> Historial </a></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 animated fadeInRight">
+                <div class="mail-box-header">
+                  <div class="pull-right tooltip-demo">
+                    <button title="" data-placement="top" data-toggle="tooltip" type="button" data-original-title="Print" class="btn btn-sm btn-white"><i class="fa fa-print"></i> Imprimir</button>
+                  </div>
+                  <h2>
+                    Visualizar llamada
+                  </h2>
+                  <div class="mail-tools tooltip-demo m-t-md">
+                    <h3>
+                      <span class="font-normal">Asunto: </span>Charla: Cómo hacer que deseen tus ofertas.
+                    </h3>
+                    <h5>
+                      <span class="pull-right font-normal">10:15AM 13 DIC 2018</span>
+                      <span class="font-normal">De: </span>haydevidal@uandresbello.edu
+                    </h5>
+                    <h5>
+                      <span class="font-normal">Para: </span>maguilar@uandresbello.com; galarcon@uandresbello.edu; ralcoverde@uandresbello.edu
+                    </h5>
+                  </div>
+                </div>
+                <div class="mail-box">
+                  <br><br>
+                  <div class="image">
+                    <center><img alt="image" class="img-responsive" src="{% static 'img/charlaUnab.jpg' %}"></center>
+                  </div>
+                  <br><br><br>
+                  <div class="form-group"><label class="col-sm-2 control-label">¿Contesto? :</label>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" class="js-switch" disabled=""/>
+
+                  </div>
+                  <br>
+                  <div class="form-group"><label class="col-sm-2 control-label">Nivel de contactabilidad<br/><small class="text-navy">escala de 1 a 10</small></label>
+                    <div class="col-md-2"><input class="touchspin1" name="nivelInteres" type="number" value="0" style="text-align:center;" disabled=""><small>Nivel de interes</small></div>
+                    <div class="col-md-2"><input class="touchspin1" name="nivelRespuesta" type="number" value="0" style="text-align:center;" disabled=""><small>Nivel de respuesta</small></div>
+                  </div>
+                  <br><br><br><br><br><br>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  {% block javascript %} {% endblock javascript %}
+
+</body>
+
+</html>

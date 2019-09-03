@@ -1,0 +1,375 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}CONTACTABILIDAD | Registro{% endblock title %}</title>
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet">
+  <link href="{% static 'css/plugins/iCheck/custom.css' %}" rel="stylesheet">
+  <link href="{% static 'css/plugins/steps/jquery.steps.css' %}" rel="stylesheet">
+  <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css' %}" rel="stylesheet">
+  <link href="{% static 'css/plugins/chosen/bootstrap-chosen.css' %}" rel="stylesheet">
+  <link href="{% static 'css/plugins/select2/select2.min.css' %}" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                <h2><b>Crear cuenta </b><small></small></h2><br>
+              </div>
+              <div class="ibox-content">
+                <form id="form" action="#" class="wizard-big">
+                  <h1>Cuenta</h1>
+                  <fieldset>
+                    <h2>Información de la cuenta</h2>
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <div class="form-group">
+                          <label>Nombre de usuario</label>
+                          <input id="userName" name="userName" type="text" class="form-control required">
+                        </div>
+                        <div class="form-group">
+                          <label>Contraseña</label>
+                          <input id="password" name="password" type="text" class="form-control required">
+                        </div>
+                        <div class="form-group">
+                          <label>Confirmar contraseña</label>
+                          <input id="confirm" name="confirm" type="text" class="form-control required">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="text-center">
+                          <div style="margin: 20px 60px">
+                            <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <h1>Perfil</h1>
+                  <fieldset>
+                    <h2>Información de perfil</h2>
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <div class="form-group">
+                          <label>Datos personales</label>
+                          <input class="form-control" name="nombres" type="text" placeholder="Nombres" class="form-control" required>
+                          <input class="form-control" name="apellidoPaterno" type="text" placeholder="Apellido paterno" class="form-control" required>
+                          <input class="form-control" name="apellidoMaterno" type="text" placeholder="Apellido materno" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                          <input name="run" type="text" placeholder="RUN" class="form-control" required>
+                          <select class="form-control m-b" name="genero" required>
+                            <option value="" hidden>Genero</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Dirección</label>
+                          <select class="form-control m-b" name="region">
+                            <option value="" hidden>Región</option>
+                            <option value="Region Metropolitana">Region Metropolitana</option>
+                          </select>
+                          <select class="form-control m-b" name="comuna">
+                            <option value="" hidden>Comuna</option>
+                            <option value="Cerrillos">Cerrillos</option>
+                            <option value="Cerro Navia">Cerro Navia</option>
+                            <option value="Conchalí">Conchalí</option>
+                            <option value="El Bosque">El Bosque</option>
+                            <option value="Estación Central">Estación Central</option>
+                            <option value="Huechuraba">Huechuraba</option>
+                            <option value="Independencia">Independencia</option>
+                            <option value="La Cisterna">La Cisterna</option>
+                            <option value="La Florida">La Florida</option>
+                            <option value="La Granja">La Granja</option>
+                            <option value="La Pintana">La Pintana</option>
+                            <option value="La Reina">La Reina</option>
+                            <option value="Las Condes">Las Condes</option>
+                            <option value="Lo Barnechea">Lo Barnechea</option>
+                            <option value="Lo Espejo">Lo Espejo</option>
+                            <option value="Lo Prado">Lo Prado</option>
+                            <option value="Macul">Macul</option>
+                            <option value="Maipú">Maipú</option>
+                            <option value="Ñuñoa">Ñuñoa</option>
+                            <option value="Padre Hurtado">Padre Hurtado</option>
+                            <option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+                            <option value="Peñalolen">Peñalolen</option>
+                            <option value="Providencia">Providencia</option>
+                            <option value="Pudahuel">Pudahuel</option>
+                            <option value="Puente Alto">Puente Alto</option>
+                            <option value="Quilicura">Quilicura</option>
+                            <option value="Quinta Normal">Quinta Normal</option>
+                            <option value="Recoleta">Recoleta</option>
+                            <option value="Renca">Renca</option>
+                            <option value="San Bernardo">San Bernardo</option>
+                            <option value="San Joaquin">San Joaquin</option>
+                            <option value="San Miguel">San Miguel</option>
+                            <option value="San Ramón">San Ramón</option>
+                            <option value="Santiago">Santiago</option>
+                            <option value="Vitacura">Vitacura</option>
+                          </select>
+                          <input class="form-control" name="calle" type="text" placeholder="Calle">
+                        </div>
+                        <div class="form-group">
+                          <label>Telefonos</label>
+                          <div class="input-group m-b"><span class="input-group-addon">569</span><input name="telefono1" type="number" placeholder="9999 9999" class="form-control" min="8" max="8"></div>
+                          <div class="input-group m-b"><span class="input-group-addon">569</span><input name="telefono2" type="number" placeholder="9999 9999" class="form-control" min="8" max="8"></div>
+                          <div class="input-group m-b"><span class="input-group-addon">562</span><input name="telefono3" type="number" placeholder="2222 2222" class="form-control" min="8" max="8"></div>
+                        </div>
+                        <div class="form-group">
+                          <label>Correos</label>
+                          <input class="form-control" name="correo1" type="email" placeholder="ej: personal@example.com" class="form-control">
+                          <input class="form-control" name="correo2" type="email" placeholder="ej: universitadad@example.com" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Gustos & Tendencias</label>
+                          <select data-placeholder="Seleccione sus opciones..." class="chosen-select" name="gustosTendencias" multiple style="width:350px;" tabindex="4">
+                            <option value="Futbol">Apps</option>
+                            <option value="Futbol">Desarrollo web</option>
+                            <option value="Futbol">Programación</option>
+                            <option value="Futbol">Robotica</option>
+                            <option value="Futbol">Seguridad informatica</option>
+                            <option value="Futbol">Software</option>
+                            <option value="Futbol">Testing</option>
+                            <option value="Futbol">Video juegos</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Horario disponible</label>
+                          <div class="input-group clockpicker" data-autoclose="true">
+                            <input name="horaInicio" type="text" class="form-control" value="09:30">
+                            <span class="input-group-addon">
+                              <span class="fa fa-clock-o"></span>
+                            </span>
+                          </div>
+                          <small>Hora de inicio</small>
+                          <div class="input-group clockpicker" data-autoclose="true">
+                            <input name="horaFin" type="text" class="form-control" value="21:30">
+                            <span class="input-group-addon">
+                              <span class="fa fa-clock-o"></span>
+                            </span>
+                          </div>
+                          <small>Hora de termino</small>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="text-center">
+                          <div style="margin: 340px 70px">
+                            <i class="fa fa-user" style="font-size: 180px;color: #e5e5e5 "></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <h1>Academico</h1>
+                  <fieldset>
+                    <h2>Información académica</h2>
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <div class="form-group">
+                          <label>Rol academico</label>
+                          <select class="form-control m-b" name="rolAcademico" required>
+                            <option value="" hidden>Rol academico</option>
+                            <option value="Alumno">Alumno</option>
+                            <option value="Ex alumno">Ex alumno</option>
+                            <option value="Docente">Docente</option>
+                            <option value="Ex docente">Ex docente</option>
+                            <option value="Director">Director</option>
+                            <option value="Ex director">Ex director</option>
+                            <option value="Secretario academico">Secretario academico</option>
+                            <option value="Ex secretario academico">Ex secretario academico</option>
+                            <option value="Secretaria">Secretaria</option>
+                            <option value="Ex secretaria">Ex secretaria</option>
+                            <option value="Otro">Otro</option>
+                          </select>
+
+                        </div>
+                        <div class="form-group">
+                          <label>Tipo de regimen</label>
+                          <select class="form-control m-b" name="tipoRegimen" required>
+                            <option value="" hidden>Tipo de régimen</option>
+                            <option value="Diurno">Diurno</option>
+                            <option value="Vespertino">Vespertino</option>
+                            <option value="Advance">Advance</option>
+                          </select>
+                        </div>
+                        <div class="form-group">
+                          <label>Carrera</label>
+                          <select class="form-control m-b" name="carrera" required>
+                            <option value="" hidden>Carrera</option>
+                            <option value="Masculino">Administración jurídica</option>
+                            <option value="Advance">Arquitectura</option>
+                            <option value="Advance">Composición musical</option>
+                            <option value="Advance">Enfermería</option>
+                            <option value="Advance">Fonoaudiología</option>
+                            <option value="Femenino">Ingeniería comercial</option>
+                            <option value="Masculino">Ingeniería en computación e informática</option>
+                            <option value="Advance">Kinesiología</option>
+                            <option value="Advance">Licenciatura en filosofía</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="text-center">
+                          <div style="margin: 20px">
+                            <i class="fa fa-graduation-cap" style="font-size: 180px;color: #e5e5e5 "></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <h1>Fin</h1>
+                  <fieldset>
+                    <h3>Terminos y condiciones</h3><br>
+                    <div class="col-lg-8">
+                      <div class="form-group">
+                        <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms">Estoy de acuerdo con los terminos y condiciones</label>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="text-center">
+                        <div style="margin: 20px 60px">
+                          <i class="fa fa-check-square-o" style="font-size: 180px;color: #e5e5e5 "></i>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="m-t" align="center"> <small>Universidad Andrés Bello &copy; 2016-2017</small> <small> - ICINF</small></p>
+      </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+    <!-- Mainly scripts -->
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/plugins/metisMenu/jquery.metisMenu.js' %}"></script>
+    <script src="{% static 'js/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="{% static 'js/inspinia.js' %}"></script>
+    <script src="{% static 'js/plugins/pace/pace.min.js' %}"></script>
+    <!-- Steps -->
+    <script src="{% static 'js/plugins/steps/jquery.steps.min.js' %}"></script>
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.i-checks').iCheck({
+          checkboxClass: 'icheckbox_square-green',
+          radioClass: 'iradio_square-green',
+        });
+      });
+    </script>
+    <!-- Jquery Validate -->
+    <script src="{% static 'js/plugins/validate/jquery.validate.min.js' %}"></script>
+    <script>
+      $(document).ready(function() {
+        $("#wizard").steps();
+        $("#form").steps({
+          bodyTag: "fieldset",
+          onStepChanging: function(event, currentIndex, newIndex) {
+            // Always allow going backward even if the current step contains invalid fields!
+            if (currentIndex > newIndex) {
+              return true;
+            }
+            // Forbid suppressing "Warning" step if the user is to young
+            if (newIndex === 3 && Number($("#age").val()) < 18) {
+              return false;
+            }
+            var form = $(this);
+            // Clean up if user went backward before
+            if (currentIndex < newIndex) {
+              // To remove error styles
+              $(".body:eq(" + newIndex + ") label.error", form).remove();
+              $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+            }
+            // Disable validation on fields that are disabled or hidden.
+            form.validate().settings.ignore = ":disabled,:hidden";
+
+            // Start validation; Prevent going forward if false
+            return form.valid();
+          },
+          onStepChanged: function(event, currentIndex, priorIndex) {
+            // Suppress (skip) "Warning" step if the user is old enough.
+            if (currentIndex === 2 && Number($("#age").val()) >= 18) {
+              $(this).steps("next");
+            }
+            // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+            if (currentIndex === 2 && priorIndex === 3) {
+              $(this).steps("previous");
+            }
+          },
+          onFinishing: function(event, currentIndex) {
+            var form = $(this);
+            // Disable validation on fields that are disabled.
+            // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+            form.validate().settings.ignore = ":disabled";
+            // Start validation; Prevent form submission if false
+            return form.valid();
+          },
+          onFinished: function(event, currentIndex) {
+            var form = $(this);
+            // Submit form input
+            form.submit();
+          }
+        }).validate({
+          errorPlacement: function(error, element) {
+            element.before(error);
+          },
+          rules: {
+            confirm: {
+              equalTo: "#password"
+            }
+          }
+        });
+      });
+    </script>
+    <!-- Chosen -->
+    <script src="{% static 'js/plugins/chosen/chosen.jquery.js' %}"></script>
+    <script>
+      $('.chosen-select').chosen({
+        width: "100%"
+      });
+    </script>
+    <!-- Select2 -->
+    <script src="{% static 'js/plugins/select2/select2.full.min.js' %}"></script>
+    <script>
+      $(".select2_demo_1").select2();
+      $(".select2_demo_2").select2({
+        placeholder: "Selecciona una opción",
+        allowClear: true
+      });
+      $(".select2_demo_3").select2({
+        placeholder: "Selecciona una opción",
+        allowClear: true
+      });
+    </script>
+</body>
+
+</html>

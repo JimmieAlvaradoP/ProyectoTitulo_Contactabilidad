@@ -1,0 +1,156 @@
+{% extends "_Partials/_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %} CONTACTABILIDAD | Mensaje {% endblock title %}}</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+          <div class="wrapper wrapper-content">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content mailbox-content">
+                    <div class="file-manager">
+                      <a class="btn btn-block btn-primary compose-mail" href="{% url 'redactarCorreo' %}">Redactar</a>
+                      <div class="space-25"></div>
+                      <br><br>
+                      <ul class="folder-list m-b-md" style="padding: 0">
+                        <li><a href="{% url 'contactarCorreo' %}"> <i class="fa fa-inbox "></i> Inbox <span class="label label-warning pull-right">7</span> </a></li>
+                        <li><a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a></li>
+                        <li><a href="#"> <i class="fa fa-certificate"></i> Important</a></li>
+                        <li><a href="#"> <i class="fa fa-file-text-o"></i> Drafts</a></li>
+                        <li><a href="#"> <i class="fa fa-trash-o"></i> Trash</a></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 animated fadeInRight">
+                <div class="mail-box-header">
+                  <div class="pull-right tooltip-demo">
+                    <a href="{% url 'redactarCorreo' %}" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top"><i class="fa fa-reply"></i> Responder</a>
+                    <a href="#" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top"><i class="fa fa-print"></i> </a>
+                    <a href="{% url 'contactarCorreo' %}" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash-o"></i> </a>
+                  </div>
+                  <h2>
+                    Visualizar mensaje
+                  </h2>
+                  <div class="mail-tools tooltip-demo m-t-md">
+                    <h3>
+                      <span class="font-normal">Asunto: </span>Documentos solicitados.
+                    </h3>
+                    <h5>
+                      <span class="pull-right font-normal">10:15AM 13 DIC 2018</span>
+                      <span class="font-normal">De: </span>maguilar@uandresbello.edu
+                    </h5>
+                  </div>
+                </div>
+                <div class="mail-box">
+                  <div class="mail-body">
+                    <p>
+                      Hello Hayde!
+                      <br />
+                      <br />
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                      took a galley of type and scrambled it to make a type <strong>specimen book.</strong>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                      software like Aldus PageMaker including versions of Lorem Ipsum. It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                      essentially unchanged.
+                    </p>
+                    <p>
+                      It was popularised in the 1960s with the release <a href="#" class="text-navy">Letraset sheets</a> containing Lorem Ipsum passages, and more recently with desktop publishing software
+                      like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                      There are many variations of passages of <strong>Lorem Ipsum</strong>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly
+                      believable. If you are going to use a passage of.
+                    </p>
+                  </div>
+                  <div class="mail-attachment">
+                    <p>
+                      <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
+                      <a href="#">Download all</a>
+                      |
+                      <a href="#">View all images</a>
+                    </p>
+                    <div class="attachment">
+                      <div class="file-box">
+                        <div class="file">
+                          <a href="#">
+                            <span class="corner"></span>
+                            <div class="icon">
+                              <i class="fa fa-file"></i>
+                            </div>
+                            <div class="file-name">
+                              Document_2014.doc
+                              <br />
+                              <small>Added: Jan 11, 2014</small>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="file-box">
+                        <div class="file">
+                          <a href="#">
+                            <span class="corner"></span>
+                            <div class="image">
+                              <img alt="image" class="img-responsive" src="{% static 'img/p1.jpg' %}">
+                            </div>
+                            <div class="file-name">
+                              Italy street.jpg
+                              <br />
+                              <small>Added: Jan 6, 2014</small>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="file-box">
+                        <div class="file">
+                          <a href="#">
+                            <span class="corner"></span>
+                            <div class="image">
+                              <img alt="image" class="img-responsive" src="{% static 'img/p2.jpg' %}">
+                            </div>
+                            <div class="file-name">
+                              My feel.png
+                              <br />
+                              <small>Added: Jan 7, 2014</small>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="mail-body text-right tooltip-demo">
+                    <a class="btn btn-sm btn-white" href="{% url 'redactarCorreo' %}"><i class="fa fa-reply"></i> Responder</a>
+                    <a class="btn btn-sm btn-white" href="{% url 'redactarCorreo' %}"><i class="fa fa-arrow-right"></i> Reenviar</a>
+                    <button title="" data-placement="top" data-toggle="tooltip" type="button" data-original-title="Print" class="btn btn-sm btn-white"><i class="fa fa-print"></i> Imprimir</button>
+                    <a href="{% url 'contactarCorreo' %}" class="btn btn-sm btn-white" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash-o">Eliminar</i> </a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  {% block javascript %} {% endblock javascript %}
+
+</body>
+
+</html>

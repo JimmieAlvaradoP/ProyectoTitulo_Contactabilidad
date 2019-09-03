@@ -1,0 +1,236 @@
+{% extends "_Partials/_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %} CONTACTABILIDAD | Editor de contacto {% endblock title %}</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h2><b>Editor de contacto </b><small>Registro solo para contactos registrados</small></h2><br>
+          </div>
+          <div class="ibox-content">
+            <form method="get" class="form-horizontal">
+
+              <div class="form-group"><label class="col-sm-2 control-label">Datos personales</label>
+                <div class="col-sm-3"><input class="form-control" name="nombres" type="text" value="María Ofelia" minlength="3" maxlength="50" pattern="[A-Za-z0-9 ]+" required disabled=""></div>
+                <div class="col-sm-3"><input class="form-control" name="apellidoPaterno" type="text" value="Aguilar" minlength="3" maxlength="50" pattern="[A-Za-z0-9 ]+" required disabled=""></div>
+                <div class="col-sm-3"><input class="form-control" name="apellidoMaterno" type="text" value="Lemus" minlength="3" maxlength="50" pattern="[A-Za-z0-9 ]+" required disabled=""></div>
+              </div>
+              <div class="form-group"><label class="col-sm-2 control-label"></label>
+                <div class="col-sm-3"><input class="form-control" name="run" type="text" value="185596680" minlength="8" maxlength="9" pattern="[A-Za-z0-9]+" required disabled=""></div>
+                <div class="col-sm-3">
+                  <select class="form-control m-b" name="genero" required>
+                    <option value="" hidden>Genero</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino" selected="true">Femenino</option>
+                  </select>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group"><label class="col-sm-2 control-label">Datos academicos</label>
+                <div class="col-sm-3">
+                  <select class="form-control m-b" name="rolAcademico" required>
+                    <option value="" hidden>Rol academico</option>
+                    <option value="Alumno" selected="true">Alumno</option>
+                    <option value="Ex alumno">Ex alumno</option>
+                    <option value="Docente">Docente</option>
+                    <option value="Ex docente">Ex docente</option>
+                    <option value="Director">Director</option>
+                    <option value="Ex director">Ex director</option>
+                    <option value="Secretario academico">Secretario academico</option>
+                    <option value="Ex secretario academico">Ex secretario academico</option>
+                    <option value="Secretaria">Secretaria</option>
+                    <option value="Ex secretaria">Ex secretaria</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+                <div class="col-sm-3">
+                  <select class="form-control m-b" name="tipoRegimen" required>
+                    <option value="" hidden>Tipo de régimen</option>
+                    <option value="Diurno">Diurno</option>
+                    <option value="Vespertino">Vespertino</option>
+                    <option value="Advance" selected="true">Advance</option>
+                  </select>
+                </div>
+                <div class="col-sm-3">
+                  <select class="form-control m-b" name="carrera" required>
+                    <option value="" hidden>Carrera</option>
+                    <option value="Masculino">Administración jurídica</option>
+                    <option value="Advance">Arquitectura</option>
+                    <option value="Advance">Composición musical</option>
+                    <option value="Advance">Enfermería</option>
+                    <option value="Advance">Fonoaudiología</option>
+                    <option value="Femenino">Ingeniería comercial</option>
+                    <option value="Masculino" selected="true">Ingeniería en computación e informática</option>
+                    <option value="Advance">Kinesiología</option>
+                    <option value="Advance">Licenciatura en filosofía</option>
+                  </select>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group"><label class="col-sm-2 control-label">Dirección</label>
+                <div class="col-sm-3">
+                  <select class="form-control m-b" name="region">
+                    <option value="" hidden>Región</option>
+                    <option value="Region Metropolitana" selected="true">Region Metropolitana</option>
+                  </select>
+                </div>
+                <div class="col-sm-3">
+                  <select class="form-control m-b" name="comuna">
+                    <option value="" hidden>Comuna</option>
+                    <option value="Cerrillos">Cerrillos</option>
+                    <option value="Cerro Navia">Cerro Navia</option>
+                    <option value="Conchalí">Conchalí</option>
+                    <option value="El Bosque">El Bosque</option>
+                    <option value="Estación Central">Estación Central</option>
+                    <option value="Huechuraba">Huechuraba</option>
+                    <option value="Independencia">Independencia</option>
+                    <option value="La Cisterna">La Cisterna</option>
+                    <option value="La Florida">La Florida</option>
+                    <option value="La Granja">La Granja</option>
+                    <option value="La Pintana">La Pintana</option>
+                    <option value="La Reina">La Reina</option>
+                    <option value="Las Condes">Las Condes</option>
+                    <option value="Lo Barnechea">Lo Barnechea</option>
+                    <option value="Lo Espejo">Lo Espejo</option>
+                    <option value="Lo Prado">Lo Prado</option>
+                    <option value="Macul">Macul</option>
+                    <option value="Maipú">Maipú</option>
+                    <option value="Ñuñoa">Ñuñoa</option>
+                    <option value="Padre Hurtado">Padre Hurtado</option>
+                    <option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+                    <option value="Peñalolen">Peñalolen</option>
+                    <option value="Providencia" selected="true">Providencia</option>
+                    <option value="Pudahuel">Pudahuel</option>
+                    <option value="Puente Alto">Puente Alto</option>
+                    <option value="Quilicura">Quilicura</option>
+                    <option value="Quinta Normal">Quinta Normal</option>
+                    <option value="Recoleta">Recoleta</option>
+                    <option value="Renca">Renca</option>
+                    <option value="San Bernardo">San Bernardo</option>
+                    <option value="San Joaquin">San Joaquin</option>
+                    <option value="San Miguel">San Miguel</option>
+                    <option value="San Ramón">San Ramón</option>
+                    <option value="Santiago">Santiago</option>
+                    <option value="Vitacura">Vitacura</option>
+                  </select>
+                </div>
+                <div class="col-sm-3">
+                  <input class="form-control" name="calle" type="text" placeholder="Calle" minlength="5" maxlength="50" pattern="[A-Za-z0-9 ]+" value="Manuel Montt 1150">
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group"><label class="col-sm-2 control-label">Telefonos</label>
+                <div class="col-sm-3">
+                  <div class="input-group m-b"><span class="input-group-addon">569</span><input name="telefono1" type="tel" placeholder="9999 9999" value="97554385" class="form-control" minlength="8" maxlength="8" pattern="[0-9]+"></div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="input-group m-b"><span class="input-group-addon">569</span><input name="telefono2" type="tel" placeholder="9999 9999" value="96273235" class="form-control" minlength="8" maxlength="8" pattern="[0-9]+"></div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="input-group m-b"><span class="input-group-addon">562</span><input name="telefono3" type="tel" placeholder="2222 2222" value="" class="form-control" minlength="8" maxlength="8" pattern="[0-9]+"></div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group"><label class="col-sm-2 control-label">Correos</label>
+                <div class="col-sm-3"><input name="correo1" type="email" placeholder="ej: personal@example.com" value="lemus92@gmail.com" class="form-control"></div>
+                <div class="col-sm-3"><input name="correo2" type="email" placeholder="ej: universitadad@example.com" value="maguilar@uandresbello.edu" class="form-control"></div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group"><label class="col-sm-2 control-label">Gustos & Tendencias</label>
+                <div class="col-sm-6">
+                  <select data-placeholder="Seleccione sus opciones..." class="chosen-select" name="gustosTendencias" multiple style="width:350px;" tabindex="4">
+                    <option value="Apps" selected="true">Apps</option>
+                    <option value="Desarrollo web" selected="true">Desarrollo web</option>
+                    <option value="Deporte" selected="true">Deporte</option>
+                    <option value="Diseño" selected="true">Diseño</option>
+                    <option value="Música" selected="true">Música</option>
+                    <option value="Programación">Programación</option>
+                    <option value="Robotica" selected="true">Robotica</option>
+                    <option value="Seguridad informatica">Seguridad informatica</option>
+                    <option value="Software">Software</option>
+                    <option value="Testing">Testing</option>
+                    <option value="Futbol" selected="true">Video juegos</option>
+                  </select>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <div class="form-group"><label class="col-sm-2 control-label">Horario disponible</label>
+                <div class="col-sm-3">
+                  <div class="input-group clockpicker" data-autoclose="true">
+                    <input name="horaInicio" type="text" class="form-control" value="09:30">
+                    <span class="input-group-addon">
+                      <span class="fa fa-clock-o"></span>
+                    </span>
+                  </div>
+                  <small>Hora de inicio</small>
+                </div>
+                <div class="col-sm-3">
+                  <div class="input-group clockpicker" data-autoclose="true">
+                    <input name="horaFin" type="text" class="form-control" value="21:30">
+                    <span class="input-group-addon">
+                      <span class="fa fa-clock-o"></span>
+                    </span>
+                  </div>
+                  <small>Hora de termino</small>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <!--<div class="form-group"><label class="col-sm-2 control-label">Nivel de contactabilidad<br /><small class="text-navy">escala de 1 a 10</small></label>
+                <div class="col-md-2"><input class="touchspin1" name="nivelInteres" type="number" value="5" style="text-align:center;" disabled=""><small>Nivel de interes</small></div>
+                <div class="col-md-2"><input class="touchspin1" name="nivelRespuesta" type="number" value="5" style="text-align:center;" disabled=""><small>Nivel de respuesta</small></div>
+              </div>
+              <div class="hr-line-dashed"></div>-->
+
+              <div class="form-group" id="data_2"><label class="col-sm-2 control-label">Actualización</label>
+                <div class="col-sm-3">
+                  <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input class="form-control" name="actualización" type="text" value="">
+                  </div>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>
+
+              <!--<div class="form-group"><label class="col-sm-2 control-label">Estado</label>
+                <div class="col-sm-3">
+                  <select class="form-control m-b" name="estado" placeholder="seleccione un estado" disabled="">
+                    <option value="Activo">Activo</option>
+                    <option value="Nulo">Nulo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="hr-line-dashed"></div>-->
+              <div class="form-group">
+                <div class="col-sm-offset-5">
+                  <a class="btn btn-white" type="submit" href="{% url 'editarContacto1' %}">Cancel</a>
+                  <button class="ladda-button btn btn-warning" data-style="expand-right">Guardar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  {% block javascript %} {% endblock javascript %}
+
+</body>
+
+</html>

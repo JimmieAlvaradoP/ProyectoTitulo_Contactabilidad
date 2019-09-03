@@ -1,0 +1,296 @@
+{% extends "_Partials/_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %} CONTACTABILIDAD | Inicio {% endblock title %}}</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="widget style1">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <i class="fa fa-trophy fa-5x"></i>
+                  </div>
+                  <div class="col-xs-8 text-right">
+                    <h2 class="font-bold no-margins">13</h2>
+                    <h5 class="font-bold no-margins">
+                      Roles contactados
+                    </h5>
+                    <small>Mes actual</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget style1 red-bg">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-warning fa-5x"></i>
+                        </div>
+                        <div class="col-xs-8 text-right">
+                          <h2 class="font-bold no-margins">3</h2>
+                          <h5 class="font-bold no-margins">
+                            Roles no contactados
+                          </h5>
+                          <small>Mes actual</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget style1 lazur-bg">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-envelope-o fa-5x"></i>
+                        </div>
+                        <div class="col-xs-8 text-right">
+                          <h2 class="font-bold no-margins">9</h2>
+                          <h5 class="font-bold no-margins">
+                            contactados via email
+                          </h5>
+                          <small>Mes actual</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget style1 yellow-bg">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-phone fa-5x"></i>
+                        </div>
+                        <div class="col-xs-8 text-right">
+                          <h2 class="font-bold no-margins">4</h2>
+                          <h5 class="font-bold no-margins">
+                            Contactados via telefono
+                          </h5>
+                          <small>Mes actual</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="widget navy-bg no-padding">
+                <div class="p-m">
+                  <h1 class="font-bold no-margins">16</h1>
+
+                  <h3 class="font-bold no-margins">
+                    Contactos actualizados
+                  </h3>
+                  <small>Mes actual</small>
+                </div>
+                <div class="flot-chart">
+                  <div class="flot-chart-content" id="flot-chart1"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="widget lazur-bg no-padding">
+                <div class="p-m">
+                  <h1 class="font-bold no-margins">14</h1>
+
+                  <h3 class="font-bold no-margins">
+                    Actualizados por boot system
+                  </h3>
+                  <small>Mes actual</small>
+                </div>
+                <div class="flot-chart">
+                  <div class="flot-chart-content" id="flot-chart2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="widget yellw-bg no-padding">
+                <div class="p-m">
+                  <h1 class="font-bold no-margins">2</h1>
+
+                  <h3 class="font-bold no-margins">
+                    Actualizados por secretaria
+                  </h3>
+                  <small>Mes actual</small>
+                </div>
+                <div class="flot-chart">
+                  <div class="flot-chart-content" id="flot-chart3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br><br><br>
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="ibox-content">
+                      <h2>Lista de quehaceres</h2>
+                      <ul class="todo-list m-t">
+                          <li>
+                              <input type="checkbox" value="" name="" class="i-checks"/>
+                              <span class="m-l-xs">Invitar a conferencias</span>
+                              <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 mins</small>
+                          </li>
+                          <li>
+                              <input type="checkbox" value="" name="" class="i-checks" checked/>
+                              <span class="m-l-xs">Escanear documentos</span>
+                              <small class="label label-info"><i class="fa fa-clock-o"></i> 3 mins</small>
+                          </li>
+                          <li>
+                              <input type="checkbox" value="" name="" class="i-checks" />
+                              <span class="m-l-xs">Enviar documentos al director</span>
+                              <small class="label label-warning"><i class="fa fa-clock-o"></i> 2 mins</small>
+                          </li>
+                          <li>
+                              <input type="checkbox" value="" name="" class="i-checks"/>
+                              <span class="m-l-xs">contactar por becas</span>
+                              <small class="label label-danger"><i class="fa fa-clock-o"></i> 42 mins</small>
+                          </li>
+                          <li>
+                              <input type="checkbox" value="" name="" class="i-checks" checked/>
+                              <span class="m-l-xs">Redactar correo</span>
+                              <small class="label label-warning"><i class="fa fa-clock-o"></i> 25 mins</small>
+                          </li>
+                          <li>
+                              <input type="checkbox" value="" name="" class="i-checks"/>
+                              <span class="m-l-xs">Solicitar información de conferencias</span>
+                              <small class="label label-primary"><i class="fa fa-clock-o"></i> 1 mins</small>
+                          </li>
+                          <li>
+                              <input type="checkbox" value="" name="" class="i-checks" />
+                              <span class="m-l-xs">Enviar documentos al director</span>
+                              <small class="label label-warning"><i class="fa fa-clock-o"></i> 7 mins</small>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="ibox float-e-margins">
+                      <div class="ibox-content">
+                          <h2>Contactados recientemente</h2>
+                          <div class="table-responsive">
+                            <table class="footable table table-stripped" data-page-size="6" data-filter=#filter>
+                              <thead>
+                                <tr>
+                                  <th class="center">Nombre completo</th>
+                                  <th class="center">RUN</th>
+                                  <th class="center">Genero</th>
+                                  <th class="center">Carrera</th>
+                                  <th class="center">Fecha</th>
+                                  <th class="center">Via</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="gradeX">
+                                  <td class="center">Acevedo Manríquez María Mireya</td>
+                                  <td class="center">18.050.646-2</td>
+                                  <td class="center">Femenino</td>
+                                  <td class="center">Administración jurídica</td>
+                                  <td class="center">05/12/2018</td>
+                                  <td class="text-center"><i class="fa fa-envelope-o"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Acosta Canto Tomás José</td>
+                                  <td class="center">21.624.005-7</td>
+                                  <td class="center">Masculino</td>
+                                  <td class="center">Enfermería</td>
+                                  <td class="center">05/12/2018</td>
+                                  <td class="text-center"><i class="fa fa-envelope-o"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Aguilar Lemus María Ofelia</td>
+                                  <td class="center">18.559.668-0</td>
+                                  <td class="center">Femenino</td>
+                                  <td class="center">Computación e informática</td>
+                                  <td class="center">05/12/2018</td>
+                                  <td class="text-center"><i class="fa fa-phone"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Aguilar Pérez Fredy Francisco</td>
+                                  <td class="center">17.438.902-0</td>
+                                  <td class="center">Masculino</td>
+                                  <td class="center">Arquitectura</td>
+                                  <td class="center">30/07/2018</td>
+                                  <td class="text-center"><i class="fa fa-envelope-o"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Alcántar Camacho José Israel</td>
+                                  <td class="center">18.062.447-3</td>
+                                  <td class="center">Masculino</td>
+                                  <td class="center">Fonoaudiología</td>
+                                  <td class="center">09/09/2018</td>
+                                  <td class="text-center"><i class="fa fa-envelope-o"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Alcoverde Martínez Roberto Antonio</td>
+                                  <td class="center">16.766.824-0</td>
+                                  <td class="center">Masculino</td>
+                                  <td class="center">Comercial</td>
+                                  <td class="center">10/11/2018</td>
+                                  <td class="text-center"><i class="fa fa-phone"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Alderete Porras Jacinta Guillermina</td>
+                                  <td class="center">20.358.420-2</td>
+                                  <td class="center">Femenino</td>
+                                  <td class="center">Composición musical</td>
+                                  <td class="center">25/11/2018</td>
+                                  <td class="text-center"><i class="fa fa-envelope-o"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Alejo Guerrero Víctor Hugo</td>
+                                  <td class="center">19.837.118-1</td>
+                                  <td class="center">Masculino</td>
+                                  <td class="center">Licenciatura en filosofía</td>
+                                  <td class="center">07/8/2018</td>
+                                  <td class="text-center"><i class="fa fa-phone"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Alonso Ibarra Pascual Gerardo</td>
+                                  <td class="center">17.912.767-9</td>
+                                  <td class="center">Masculino</td>
+                                  <td class="center">Kinesiología</td>
+                                  <td class="center">01/12/2018</td>
+                                  <td class="text-center"><i class="fa fa-envelope-o"></i></td>
+                                </tr>
+                                <tr class="gradeX">
+                                  <td class="center">Alarcón López Gerardo Genaro</td>
+                                  <td class="center">19.339.381-0</td>
+                                  <td class="center">Masculino</td>
+                                  <td class="center">Computación e informática</td>
+                                  <td class="center">15/03/2018</td>
+                                  <td class="text-center"><i class="fa fa-phone"></i></td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <td colspan="10">
+                                    <ul class="pagination pull-right"></ul>
+                                  </td>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  {% block javascript %} {% endblock javascript %}
+
+</body>
+
+</html>

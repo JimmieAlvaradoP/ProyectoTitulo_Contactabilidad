@@ -1,0 +1,95 @@
+{% extends "_Partials/_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %} CONTACTABILIDAD | Llamar {% endblock title %}}</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+          <div class="wrapper wrapper-content">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                  <div class="ibox-content mailbox-content">
+                    <div class="file-manager">
+                      <a class="btn btn-block btn-primary compose-mail" href="{% url 'redactarLlamada' %}">Llamar</a>
+                      <div class="space-25"></div>
+                      <br><br>
+                      <ul class="folder-list m-b-md" style="padding: 0">
+                        <li><a href="{% url 'contactarTelefono' %}"> <i class="fa fa-phone "></i> Historial </a></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-9 animated fadeInRight">
+                <div class="mail-box-header">
+                  <div class="pull-right tooltip-demo">
+                    <a href="{% url 'contactarTelefono' %}" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top"><i class="fa fa-pencil"></i> Borrador</a>
+                    <a href="{% url 'contactarTelefono' %}" class="btn btn-danger btn-sm" data-toggle="tooltip" data-placement="top"><i class="fa fa-times"></i> Descartar</a>
+                  </div>
+                  <h2>
+                    Redactar Llamada
+                  </h2>
+                </div>
+                <div class="mail-box">
+                  <div class="mail-body">
+                    <form class="form-horizontal" method="get">
+                      <div class="form-group"><label class="col-sm-2 control-label">To:</label>
+                        <div class="col-sm-10"><input type="text" class="form-control" value="maguilar@uandresbello.com; galarcon@uandresbello.edu; ralcoverde@uandresbello.edu"></div>
+                      </div>
+                      <div class="form-group"><label class="col-sm-2 control-label">Subject:</label>
+                        <div class="col-sm-10"><input type="text" class="form-control" value="Charla: Cómo hacer que deseen tus ofertas"></div>
+                      </div>
+                      <div class="form-group"><label class="col-sm-2 control-label">Información adicional:</label>
+                        <div class="col-sm-10" class="mail-text h-200">
+                          <div class="summernote">
+                            <div class="image">
+                              <center><img alt="image" class="img-responsive" src="{% static 'img/charlaUnab.jpg' %}"></center>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br><br><br>
+                      <div class="form-group"><label class="col-sm-2 control-label">¿Contesto? :</label>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp<a href="{% url 'redactarLlamada2' %}" ><input type="checkbox" class="js-switch"/></a>
+
+                      </div>
+                      <br>
+                      <div class="form-group"><label class="col-sm-2 control-label">Nivel de contactabilidad<br/><small class="text-navy">escala de 1 a 10</small></label>
+                        <div class="col-md-2"><input class="touchspin1" name="nivelInteres" type="number" value="5" style="text-align:center;" disabled=""><small>Nivel de interes</small></div>
+                        <div class="col-md-2"><input class="touchspin1" name="nivelRespuesta" type="number" value="5" style="text-align:center;" disabled=""><small>Nivel de respuesta</small></div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="mail-body text-right tooltip-demo">
+                    <a href="{% url 'contactarTelefono' %}" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top"><i class="fa fa-save"></i> Guardar</a>
+                    <a href="{% url 'contactarTelefono' %}" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top"><i class="fa fa-times"></i> Descartar</a>
+                    <a href="{% url 'contactarTelefono' %}" class="btn btn-white btn-sm" data-toggle="tooltip" data-placement="top"><i class="fa fa-pencil"></i> Borrador</a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  {% block javascript %} {% endblock javascript %}
+
+</body>
+
+</html>

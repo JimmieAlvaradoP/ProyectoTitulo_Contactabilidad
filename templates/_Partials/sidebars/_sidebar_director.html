@@ -1,0 +1,69 @@
+{% load static %}
+
+<div class="row border-bottom">
+  <nav class="navbar navbar-fixed-top white-bg" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <ul class="nav navbar-top-links navbar-right">
+      <li>
+        <span class="m-r-sm text-muted welcome-message">Bienvenido
+          <strong> Eduardo</strong>
+        </span>
+      </li>
+      <li>
+        <a href="{% url 'login' %}">
+          <i class="fa fa-sign-out"></i> Cerrar Sesión
+          <!--<a href="{% url 'login' %}"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>-->
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<li class="nav-header">
+  <div class="dropdown profile-element"> <span>
+      <img alt="image" class="img-circle" src="{% static 'img/profile_m_small.jpg' %}" />
+    </span>
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+      <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Eduardo Quiroga</strong>
+        </span> <span class="text-muted text-xs block">Director ICINF <b class="caret"></b></span> </span> </a>
+    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+      <li><a href="{% url 'contactarCorreo' %}">Email</a></li>
+      <li class="divider"></li>
+      <li><a href="{% url 'login' %}">Logout</a></li>
+    </ul>
+  </div>
+  <div class="logo-element">
+    Cont+
+  </div>
+</li>
+
+<li>
+  <a href="{% url 'directorInicio' %}"><i class="fa fa-home"></i><span class="nav-label">Inicio</span></a>
+</li>
+<li>
+  <a><i class="fa fa-bar-chart-o"></i><span class="nav-label">Reportes</span><span class="fa arrow"></span></a>
+  <ul class="nav nav-second-level collapse">
+    <li><a href="{% url 'reportesContactabilidad' %}"><i class="fa fa-area-chart"></i>Contactabilidad</a></li>
+    <li><a href="{% url 'contactarTelefono' %}"><i class="fa fa-pie-chart"></i>Patrones de comportamiento</a></li>
+  </ul>
+</li>
+<li>
+  <a><i class="fa fa-send"></i><span class="nav-label">Contactar</span><span class="fa arrow"></span></a>
+  <ul class="nav nav-second-level collapse">
+    <li><a href="{% url 'contactarCorreo' %}"><i class="fa fa-envelope"></i>Correo</a></li>
+    <li><a href="{% url 'contactarTelefono' %}"><i class="fa fa-phone"></i>Telefono</a></li>
+  </ul>
+</li>
+<li>
+  <a><i class="fa fa-user"></i><span class="nav-label">Registros</span><span class="fa arrow"></span></a>
+  <ul class="nav nav-second-level collapse">
+    <li><a href="{% url 'visualizarContactos' %}"><i class="fa fa-users"></i>Visualizar contactos</a></li>
+    <li><a href="{% url 'registrarContacto' %}"><i class="fa fa-plus-square"></i>Registrar contacto</a></li>
+    <li><a href="{% url 'editarContacto1' %}"><i class="fa fa-pencil-square"></i>Editar contacto</a></li>
+    <li><a href="{% url 'anularContactos' %}"><i class="fa fa-minus-square"></i>Anular contacto</a></li>
+  </ul>
+</li>

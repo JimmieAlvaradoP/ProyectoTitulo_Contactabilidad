@@ -1,0 +1,176 @@
+{% extends "_Partials/_base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{% block title %} CONTACTABILIDAD | Anulador de contacto {% endblock title %}}</title>
+</head>
+
+<body>
+  {% block content %}
+  <div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+
+          <div class="ibox-title">
+            <h2><b>Anulador de contacto </b><small>Para contacto registrado</small></h2><br>
+          </div>
+          <div class="ibox-content">
+            <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search in table">
+            <div class="table-responsive">
+              <table class="footable table table-stripped" data-page-size="15" data-filter=#filter>
+                <thead>
+                  <tr>
+                    <th class="center"></th>
+                    <th class="center">Nombre completo</th>
+                    <th class="center">RUN</th>
+                    <th class="center">Genero</th>
+                    <th class="center">Rol academino</th>
+                    <th class="center">Tipo regimen</th>
+                    <th class="center">Carrera</th>
+                    <th class="center">Actualización</th>
+                    <th class="center">Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Acevedo Manríquez María Mireya</td>
+                    <td class="center">18.050.646-2</td>
+                    <td class="center">Femenino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Diurno</td>
+                    <td class="center">Administración jurídica</td>
+                    <td class="center">05/12/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Acosta Canto Tomás José</td>
+                    <td class="center">21.624.005-7</td>
+                    <td class="center">Masculino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Vespertino</td>
+                    <td class="center">Enfermería</td>
+                    <td class="center">05/12/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" checked name="input[]"></td>
+                    <td class="center">Aguilar Lemus María Ofelia</td>
+                    <td class="center">18.559.668-0</td>
+                    <td class="center">Femenino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Advance</td>
+                    <td class="center">Ingeniería en computación e informática</td>
+                    <td class="center">05/12/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Aguilar Pérez Fredy Francisco</td>
+                    <td class="center">17.438.902-0</td>
+                    <td class="center">Masculino</td>
+                    <td class="center">Ex alumno</td>
+                    <td class="center">Diurno</td>
+                    <td class="center">Arquitectura</td>
+                    <td class="center">30/07/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Alcántar Camacho José Israel</td>
+                    <td class="center">18.062.447-3</td>
+                    <td class="center">Masculino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Vespertino</td>
+                    <td class="center">Fonoaudiología</td>
+                    <td class="center">09/09/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Alcoverde Martínez Roberto Antonio</td>
+                    <td class="center">16.766.824-0</td>
+                    <td class="center">Masculino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Advance</td>
+                    <td class="center">Ingeniería comercial</td>
+                    <td class="center">10/11/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Alderete Porras Jacinta Guillermina</td>
+                    <td class="center">20.358.420-2</td>
+                    <td class="center">Femenino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Diurno</td>
+                    <td class="center">Composición musical</td>
+                    <td class="center">25/11/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Alejo Guerrero Víctor Hugo</td>
+                    <td class="center">19.837.118-1</td>
+                    <td class="center">Masculino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Vespertino</td>
+                    <td class="center">Licenciatura en filosofía</td>
+                    <td class="center">07/8/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Alonso Ibarra Pascual Gerardo</td>
+                    <td class="center">17.912.767-9</td>
+                    <td class="center">Masculino</td>
+                    <td class="center">Alumno</td>
+                    <td class="center">Advance</td>
+                    <td class="center">Kinesiología</td>
+                    <td class="center">01/12/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                  <tr class="gradeX">
+                    <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                    <td class="center">Alarcón López Gerardo Genaro</td>
+                    <td class="center">19.339.381-0</td>
+                    <td class="center">Masculino</td>
+                    <td class="center">Ex alumno</td>
+                    <td class="center">Diurno</td>
+                    <td class="center">Ingeniería en computación e informática</td>
+                    <td class="center">15/03/2018</td>
+                    <td class="center">Activo</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="10">
+                      <ul class="pagination pull-right"></ul>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-5">
+                <button class="btn btn-white" type="submit">Cancel</button>
+                <button class="ladda-button btn btn-danger" data-style="expand-right">Anular</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock content %}
+
+  {% block javascript %} {% endblock javascript %}
+
+</body>
+
+</html>
