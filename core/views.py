@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse, reverse_lazy
+from django.urls import reverse, reverse_lazy
 from core.models import *
 import datetime
 import json
@@ -14,7 +14,7 @@ import ast
 from unidecode import unidecode
 from django.conf import settings
 from django.template.loader import get_template
-import StringIO
+#import StringIO
 import os
 from io import BytesIO
 from django.template.loader import get_template
