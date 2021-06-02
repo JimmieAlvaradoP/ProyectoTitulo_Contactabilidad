@@ -65,7 +65,7 @@ Twisted==19.7.0
 txaio==18.8.1
 
 Unidecode==0.04.20
-urllib3==1.21.1
+urllib3==1.26.5
 
 xhtml2pdf==0.0.6
 
